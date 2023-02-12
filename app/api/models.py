@@ -10,7 +10,7 @@ class Item(models.Model):
     Model represents products
     """
     name = models.CharField(max_length=250)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     price = models.FloatField()
 
     def get_absolute_url(self):
