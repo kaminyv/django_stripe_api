@@ -1,0 +1,5 @@
+Django==4.1.6
+Faker==16.8.1
+gunicorn==20.1.0
+python-dotenv==0.21.1
+stripe==5.1.1
