@@ -127,5 +127,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Static collect
+
+STATIC_ROOT = 'staticfiles'
+
 # Stripe settings
 STRIPE_API_KEY = environ.get('STRIPE_API_KEY', '')
+STRIPE_API_PUB_KEY = environ.get('STRIPE_API_PUB_KEY', '')

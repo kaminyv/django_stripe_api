@@ -18,6 +18,10 @@ class ItemDetailView(DetailView):
     """
     model = Item
 
+    def render_to_response(self, context, **response_kwargs):
+        response = super(DetailView, self).render_to_response(context, **response_kwargs)
+        response.set_cookie('stripe_public_key', settings.STRIPE_API_PUB_KEY)
+        return response
 
 class ItemBuyView(View):
     """
