@@ -12,7 +12,7 @@
 
 Скопируйте файл настроек
 
-`cp app/.env.expample app/.env`
+`cp app/.env.example app/.env`
 
 Отредактируйте файл **.env**
 
@@ -30,11 +30,11 @@
 
 Обновите pip:
 
-`python pip install --upgrade pip`
+`pip install --upgrade pip`
 
 Установите модули для проекта:
 
-`python pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
 Соберите миграции:
 
