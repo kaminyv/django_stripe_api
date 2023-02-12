@@ -78,6 +78,10 @@
 
 `docker exec -it django_stripe_api-app-1 python manage.py createsuperuser`
 
+Соберите статичные файлы:
+
+`docker exec -it django_stripe_api-app-1 python manage.py collectstatic`
+
 Перезапустите docker
 
 `docker compose restart`
