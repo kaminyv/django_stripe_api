@@ -13,6 +13,10 @@ class Item(models.Model):
     description = models.TextField(blank=True)
     price = models.FloatField()
 
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.name
+
     def get_absolute_url(self):
         """
         Returns the url to access a particular item instance.

@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Item
 
-# Register your models here.
+
+@admin.register(Item)
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'description')
+    fields = ['name', 'price', 'description']
