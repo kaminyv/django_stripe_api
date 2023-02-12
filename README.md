@@ -4,7 +4,7 @@
 
 Клонируйте репозиторий:
 
-`git clone git@github.com:kaminyv/django_stripe_api.git`
+`git clone https://github.com/kaminyv/django_stripe_api.git`
 
 Прейдите в каталог проекта:
 
@@ -58,16 +58,29 @@
 
 ### Развертывание окружения c docker
 
-
 Запустите сборку docker
 
 `docker compose up -d`
 
-Выполните команды
+Соберите миграции:
 
-docker exec -it django_stripe_api-app-1 python manage.py makemigrations
-docker exec -it django_stripe_api-app-1 python manage.py migrate
-docker exec -it django_stripe_api-app-1 python manage.py createsuperuser
-docker exec -it django_stripe_api-app-1 python manage.py createdata
+`docker exec -it django_stripe_api-app-1 python manage.py makemigrations`
+
+Примените миграции:
+
+`docker exec -it django_stripe_api-app-1 python manage.py migrate`
+
+Примените тестовые данные:
+
+`docker exec -it django_stripe_api-app-1 python manage.py createdata`
+
+Создайте суперпользователя:
+
+`docker exec -it django_stripe_api-app-1 python manage.py createsuperuser`
+
+Перезапустите docker
+
+`docker compose restart`
+
 
 
