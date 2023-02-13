@@ -1,4 +1,5 @@
 {% extends 'base_template.html' %}
+{% load static %}
 
 {% block pricing-header %}
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
@@ -13,13 +14,11 @@
         {% for item in object_list %}
             <div class="col">
                 <div class="card h-100 mb-4 rounded-3">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">{{ item.name }}</h4>
-                    </div>
+                    <img src="{% static 'api/img/product.jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">${{ item.price }}</h1>
-                        <a href="{{ item.get_absolute_url }}" class="w-100 btn btn-lg btn-outline-primary">Buy</a>
-                        <p class="text mt-3 mb-4">{{ item.description }}</p>
+                        <h1 class="card-title pricing-card-title mb-4">${{ item.price }}</h1>
+                        <h4 class="card-tile mb-4">{{ item.name }}</h4>
+                        <a href="{{ item.get_absolute_url }}" class="w-100 btn btn-lg btn-outline-primary">Show</a>
                     </div>
                 </div>
             </div>
